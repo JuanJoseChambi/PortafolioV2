@@ -1,4 +1,4 @@
-const routes = require("../src/routes/index")
+// const routes = require("../src/routes/index")
 
 const express = require("express")
 const bodyParser = require("body-parser");
@@ -22,6 +22,6 @@ server.use((req, res, next) => { //middleware de cors de seguirdad de accesos y 
     next();
   });
 
-server.use("/", routes)
+// server.use("/", routes)
 
 module.exports = server
