@@ -4,7 +4,8 @@ const express = require("express")
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser")
 const cors = require("cors")
-const morgan = require("morgan")
+const morgan = require("morgan");
+const router = require("./routes");
 
 const server = express();
 
@@ -22,6 +23,6 @@ server.use((req, res, next) => { //middleware de cors de seguirdad de accesos y 
     next();
   });
 
-// server.use("/", routes)
+server.use("/api", router)
 
 module.exports = server
