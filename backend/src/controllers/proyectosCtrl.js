@@ -18,8 +18,19 @@ proyectosRouter
     })
     .patch(async (req, res) => { //Patch permite cambiar propiedades especificas y no hacer un cambio completo de todo
         const { id } = req.params
-        await Proyecto.findByIdAndUpdate(id, {nombre:"Jose"})
+        const update = req.body
+
+        await Proyecto.findByIdAndUpdate(id, update)
+
         res.status(200).json({status: "Success"})
+    })
+    .put(async (req, res) => {
+        const {id} = req.params
+        const update = req.body
+
+        const result = await Proyecto.findByIdAndUpdate(id, update, {new: true}) // new:true le indica a Mongoose que devuelva el documento actualizado en lugar del documento original., viene por defecto en false
+
+        res.status(200).json(result)
     })
     .delete(async (req, res) => {
         const {id} = req.params
