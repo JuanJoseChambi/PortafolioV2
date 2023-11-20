@@ -8,16 +8,23 @@ proyectosRouter.get("/", async (req, res) => {
     res.status(200).json(allDB)
 })  
 proyectosRouter
-    .route("/:id")
+    .route("/:id") //Route permite hacer para un solo path varios metodos, como en este caso get, patch y delete que nesecitan id
     .get(async (req, res) => {
         const { id } = req.params
 
         const proyect = await Proyecto.findById(id);
-        
+
         res.status(200).json(proyect)
     })
-    .patch((req, res) => {
-
+    .patch(async (req, res) => { //Patch permite cambiar propiedades especificas y no hacer un cambio completo de todo
+        const { id } = req.params
+        await Proyecto.findByIdAndUpdate(id, {nombre:"Jose"})
+        res.status(200).json({status: "Success"})
+    })
+    .delete(async (req, res) => {
+        const {id} = req.params
+        await Proyecto.findByIdAndDelete(id)
+        res.status(200).json({status:"success"})
     })
 
 proyectosRouter.post("/", async (req, res) => {
