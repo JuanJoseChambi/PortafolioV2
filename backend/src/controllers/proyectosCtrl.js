@@ -28,8 +28,13 @@ proyectosRouter
         const {id} = req.params
         const update = req.body
 
-        const result = await Proyecto.findByIdAndUpdate(id, update, {new: true}) // new:true le indica a Mongoose que devuelva el documento actualizado en lugar del documento original., viene por defecto en false
-
+        // const result = await Proyecto.findByIdAndUpdate(id, update, {new: true}) // new:true le indica a Mongoose que devuelva el documento actualizado en lugar del documento original., viene por defecto en false
+       
+        const result = await Proyecto.findById(id)
+        update.nombre?result.nombre = update.nombre : result.nombre;
+        update.edad?result.edad = update.edad : result.edad;
+        await result.save()
+        
         res.status(200).json(result)
     })
     .delete(async (req, res) => {

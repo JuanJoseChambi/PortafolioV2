@@ -38,7 +38,7 @@ const proyectoSchema = new mongoose.Schema({
     edad:{
         type:Number
     }
-}, {timestamps:true})
+}, {timestamps:true, versionKey: false})
 
 const Proyecto = mongoose.model("proyecto", proyectoSchema)
 
