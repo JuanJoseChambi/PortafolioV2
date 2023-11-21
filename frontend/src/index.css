@@ -11,3 +11,8 @@ body{
     align-items: center;
     justify-content: center;
 }
+@layer components {
+    .area{
+        @apply max-w-screen-xl w-[90%] overflow-hidden mx-auto
+    }
+}
