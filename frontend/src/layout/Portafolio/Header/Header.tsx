@@ -1,32 +1,23 @@
-// import logo from "../../../assets/assetsHeader/Logo 5 Transparent.png"
-import logo from "../../../assets/assetsHeader/logoBien.png"
+import logo from "../../../assets/assetsHeader/logoJC.png"
 
 function Header() {
   return (
     <header className="area relative ">
 
-      {/* <ul className="absolute right-0">
-        <li>Linkedin</li>
-        <li>Gmail</li>
-        <li>Twiter</li>
-        <li>GitHub</li>
-      </ul> */}
-
-      <section className="flex justify-center items-center flex-col">
-        <picture className="w-[150px]">
-            <img src={logo} alt="" className="w-full drop-shadow-[10px_10px_6px_black]" />
+      <section className="flex justify-center items-center flex-col py-10">
+        <picture className="w-[150px] select-none ">
+            <img src={logo} alt="" className="w-full drop-shadow-[10px_10px_6px_black] pointer-events-none" />
         </picture>
-        <h1 className="text-[#DCDEDD] text-7xl font-black tracking-wide drop-shadow-[15px_15px_6px_black]">JUAN JOSE CH</h1>
-        <h2 className="text-[#DCDEDD] text-sm font-extralight mt-4">Desarrollador Frontend Junior</h2>
+        <p className="text-[#4e4e4e] font-semibold text-sm mr-[290px] tracking-widest select-none">SOY</p>
+        <h1 className="text-whiteText text-7xl font-black tracking-wide drop-shadow-[15px_15px_8px_black] select-none my-6">JUAN JOSE CH</h1>
+        <p className="text-[#4e4e4e] text-xs font-semibold select-none w-[150px] ml-[145px] tracking-wide ">UN DESARROLLADOR FULLSTACK JUNIOR</p>
       </section>
-
-      {/* <ul className="absolute right-0 bottom-0">
-        <li>Contactsssssssssssssssssssso</li>
-        <li>About</li>
-      </ul> */}
 
     </header>
   );
 }
 
 export default Header;
+
+
+// text-shadow: drop-shadow-[0px_8px_5px_black]
