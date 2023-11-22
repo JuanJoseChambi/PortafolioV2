@@ -14,7 +14,7 @@ function Header() {
 
       <section className="flex justify-center items-center flex-col">
         <picture className="w-[150px]">
-            <img src={logo} alt="" className="w-full" />
+            <img src={logo} alt="" className="w-full drop-shadow-[10px_10px_6px_black]" />
         </picture>
         <h1 className="text-[#DCDEDD] text-7xl font-black tracking-wide drop-shadow-[15px_15px_6px_black]">JUAN JOSE CH</h1>
         <h2 className="text-[#DCDEDD] text-sm font-extralight mt-4">Desarrollador Frontend Junior</h2>
