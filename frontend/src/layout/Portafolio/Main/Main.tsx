@@ -1,6 +1,8 @@
 function Main() {
   return (
-    <div>Main</div>
+    <main className="area h-screen snap-center">
+      das
+    </main>
   )
 }
 

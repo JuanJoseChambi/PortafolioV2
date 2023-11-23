@@ -1,12 +1,14 @@
 import Header from "../../layout/Portafolio/Header/Header"
+import Main from "../../layout/Portafolio/Main/Main"
 import Nav from "../../layout/Portafolio/Nav/Nav"
 
 function Portafolio() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center relative">
+    <main className="overflow-y-scroll h-screen snap-mandatory snap-y ">
       <Nav/>
       <Header/>
-    </div>
+      <Main/>
+    </main>
   )
 }
 

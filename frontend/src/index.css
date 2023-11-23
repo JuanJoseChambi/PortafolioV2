@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    background:  radial-gradient(100vh 100vh at 65vh 10vh, #505156, #2d2e33, #1B1C21);
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 @layer components {
     .area{
         @apply max-w-screen-xl w-[90%] overflow-hidden mx-auto
     }
 }
+@layer utilities {
+    .bg-gradient-radial-fixed {
+      background: radial-gradient(100vh 100vh at 65vh 10vh, #505156, #2d2e33, #1B1C21);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }

@@ -2,9 +2,9 @@ import logo from "../../../assets/assetsHeader/logoJC.png"
 
 function Header() {
   return (
-    <header className="area relative">
+    <header className="area flex justify-center items-center h-screen relative snap-center">
 
-      <section className="flex justify-center items-center flex-col ">
+      <section className="flex justify-center items-center flex-col w-full h-full ">
         <picture className="w-[150px] select-none ">
             <img src={logo} alt="" className="w-full drop-shadow-[10px_10px_6px_black] pointer-events-none" />
         </picture>
