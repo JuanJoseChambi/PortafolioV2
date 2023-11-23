@@ -9,12 +9,14 @@ function Nav() {
           <img src={logo} alt="" className="w-full pointer-events-none"/>
         </picture>
 
+       <section className="hidden sm:flex">
         <ul className="flex space-x-8 font-semibold tracking-widest text-[10px] text-[#9b9b9b] transition-colors duration-500">
-          <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">SOBRE MI</li>
-          <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">TECNOLOGIAS</li>
-          <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">PROYECTOS</li>
-          <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">CONTACTO</li>
-        </ul>
+           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">SOBRE MI</li>
+           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">TECNOLOGIAS</li>
+           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">PROYECTOS</li>
+           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">CONTACTO</li>
+         </ul>
+       </section>
 
       </section>
 
