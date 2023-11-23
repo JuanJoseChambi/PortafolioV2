@@ -1,37 +1,49 @@
+// import { useState } from "react"
 import logo from "../../../assets/assetsHeader/logoJC.png"
+
+
 function Nav() {
+  // const [sections, setSections] = useState(false)
   return (
-    <nav className="area absolute top-0">
+    <>
+    <nav className="area absolute top-0 z-10">
 
-      <section className="flex justify-between items-center py-2">
+        <section className="flex justify-between items-center py-2">
 
-        <picture className="top-0 flex w-[65px] select-none">
-          <img src={logo} alt="" className="w-full pointer-events-none"/>
-        </picture>
+          <picture className="top-0 flex w-[65px] select-none">
+            <img src={logo} alt="Juan Jose Chambi" className="w-full pointer-events-none"/>
+          </picture>
 
-       <section className="hidden sm:flex">
-        <ul className="flex space-x-8 font-semibold tracking-widest text-[10px] text-[#9b9b9b] transition-colors duration-500">
-           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">SOBRE MI</li>
-           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">TECNOLOGIAS</li>
-           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">PROYECTOS</li>
-           <li className="cursor-pointer hover:text-whiteText  transition-colors duration-300">CONTACTO</li>
-         </ul>
-       </section>
+         <section className="">
+          <ul className="hidden sm:flex space-x-8 font-semibold tracking-widest text-xxs text-grey-light transition-colors duration-500">
+             <li className="cursor-pointer hover:text-whiteText transition-colors duration-300">SOBRE MI</li>
+             <li className="cursor-pointer hover:text-whiteText transition-colors duration-300">TECNOLOGIAS</li>
+             <li className="cursor-pointer hover:text-whiteText transition-colors duration-300">PROYECTOS</li>
+             <li className="cursor-pointer hover:text-whiteText transition-colors duration-300">CONTACTO</li>
+           </ul>
+         </section>
+         <i className='bx bx-menu block sm:hidden text-3xl text-whiteText cursor-pointer'></i>
+        </section>
+    </nav>  
 
-      </section>
-
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+    <nav className="area h-[110px] absolute bottom-4 z-10 flex justify-between items-center">
+      <ul className="flex justify-center items-center flex-col text-xl text-grey-light">
+          <li><i className='cursor-pointer hover:text-whiteText bx bxl-github'></i></li>
+          <li><i className='cursor-pointer hover:text-whiteText bx bxl-gmail' ></i></li>
+          <li><i className='cursor-pointer hover:text-whiteText bx bxl-linkedin-square' ></i></li>
+          <li><i className='cursor-pointer hover:text-whiteText bx bxl-twitter' ></i></li>
       </ul>
 
-      <ul>
-        <li></li>
-        <li></li>
+      <ul className=" flex flex-col text-grey-light text-xxs font-semibold tracking-widest bg-red-500">
+          <li className="hover:text-whiteText cursor-pointer rotate-90 my-10 bg-lime-500">SOMBRE MI</li>
+          <div className="w-[50px] h-[1px] bg-white rotate-90 my-5"></div>
       </ul>
+
     </nav>
+        
+
+        
+    </>
   )
 }
 
