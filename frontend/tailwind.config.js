@@ -10,12 +10,17 @@ export default {
         "poppins":['Poppins', "sans-serif"]
       },
       textColor: {
-        "whiteText": "#DCDEDD",
+        "white-light": "#DCDEDD",
         "grey-light": "#9b9b9b",
         "grey-dark": "#4e4e4e"
       },
       fontSize: {
         "xxs":"10px"
+      },
+      backgroundColor: {
+        "white-light": "#DCDEDD",
+        "grey-light": "#9b9b9b",
+        "grey-dark": "#4e4e4e"
       }
     },
   },

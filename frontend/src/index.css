@@ -4,7 +4,7 @@
 
 
 body{
-    background:  radial-gradient(600px 600px at 65vh 10vh, #505156, #2d2e33, #1B1C21);
+    background:  radial-gradient(100vh 100vh at 65vh 10vh, #505156, #2d2e33, #1B1C21);
     height: 100vh;
     margin: 0;
     display: flex;
