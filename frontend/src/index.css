@@ -12,12 +12,12 @@
     @apply
       w-[300px]
       h-[350px]
-      /* flex */
-      /* justify-center */
-      /* items-start */
+      flex
+      justify-center
+      items-start
       relative
-      /* overflow-hidden */
-      /* rounded-sm */
+      overflow-hidden
+      rounded-sm
       grayscale-[80%]
       hover:grayscale-0
       lg:blur-xs
