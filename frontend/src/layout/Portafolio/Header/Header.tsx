@@ -1,8 +1,30 @@
+import { useContext, useEffect, useRef } from "react";
 import logo from "../../../assets/assetsHeader/logoJC.png"
+import ContextSharedRef from "../../../utils/Contexts/ContextSharedRef";
 
 function Header() {
+
+  const headerRef = useRef<HTMLHeadingElement | null>(null)
+
+  const context = useContext(ContextSharedRef);
+
+  if (!context) {
+    return null
+  }
+  const { setLine } = context
+
+  useEffect(() => {
+    console.log(setLine);
+
+    if (headerRef.current) {
+      setLine(true)
+    }else{
+      setLine(false)
+    }
+  }, [headerRef.current])
+
   return (
-    <header className="area flex justify-center items-center h-screen relative snap-center">
+    <header className="area flex justify-center items-center h-screen relative snap-center" ref={headerRef}>
 
       <section className="flex justify-center items-center flex-col w-full h-full ">
         <picture className="w-[150px] select-none ">

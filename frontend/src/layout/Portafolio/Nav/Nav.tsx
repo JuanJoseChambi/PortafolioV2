@@ -1,9 +1,18 @@
 // import { useState } from "react"
+import { useContext } from "react";
 import logo from "../../../assets/assetsHeader/logoJC.png";
 import SectionsNav from "../../../components/SectionsNav/SectionsNav";
+import ContextSharedRef from "../../../utils/Contexts/ContextSharedRef";
 
 function Nav() {
-  // const [sections, setSections] = useState(false)
+
+  const context = useContext(ContextSharedRef)
+
+  if (!context) {
+    return null
+  }
+  const { line } = context;
+  
   return (
     <nav className="area">
       <nav className="area fixed top-0 z-10">
@@ -45,11 +54,11 @@ function Nav() {
         </ul>
 
         <ul className="h-[150px] flex flex-col justify-center items-center text-grey-light text-xxs font-semibold tracking-widest">
-          <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>
+          {line ? null : <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>}
           <li className="hover:text-white-light cursor-pointer rotate-90 my-12">
             SOMBRE MI
           </li>
-          <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>
+          {line ? null :  <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div> }         
         </ul>
       </nav>
     </nav>

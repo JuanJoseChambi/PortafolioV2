@@ -1,9 +1,31 @@
+
 function Main() {
+
   return (
-    <main className="area h-screen snap-center">
-      das
+    <main>
+
+      <section className="area h-screen snap-center">
+        <article className="text-white">Holaaaaaaaa</article>
+      </section>
+
+      <section className="area h-screen snap-center">
+        <article className="text-white">Holaaaaaaaa</article>
+      </section>
+
+      <section className="area h-screen snap-center">
+        <article className="text-white">Holaaaaaaaa</article>
+      </section>
+
+      <section className="area h-screen snap-center">
+        <article className="text-white">Holaaaaaaaa</article>
+      </section>
+
+      <section className="area h-screen snap-center">
+        <article className="text-white">Holaaaaaaaa</article>
+      </section>
+
     </main>
-  )
+  );
 }
 
-export default Main
+export default Main;
