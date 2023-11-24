@@ -18,7 +18,8 @@ function Header() {
 
     if (headerRef.current) {
       setLine(true)
-    }else{
+    }
+    return () => {
       setLine(false)
     }
   }, [headerRef.current])

@@ -16,7 +16,8 @@ function Footer() {
     
     if (footerRef.current) {
       setLine(true)
-    }else{
+    }
+    return () => {
       setLine(false)
     }
   }, [footerRef.current])
