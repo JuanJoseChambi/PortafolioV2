@@ -1,24 +1,18 @@
+import Proyectos from "./Proyectos";
+import SobreMi from "./SobreMi";
+import Tecnologias from "./Tecnologias";
 
 function Main() {
+
 
   return (
     <main>
 
-      <section className="area h-screen snap-center">
-        <article className="text-white">SOMBRE MI</article>
-      </section>
+      <SobreMi/>
 
-      <section className="area h-screen snap-center">
-        <article className="text-white">PROYECTOS</article>
-      </section>
+      <Proyectos/>
 
-      <section className="area h-screen snap-center">
-        <article className="text-white">TECNOLOGIAS</article>
-      </section>
-
-      <section className="area h-screen snap-center">
-        <article className="text-white">ESTUDIOS</article>
-      </section>
+      <Tecnologias/>
 
     </main>
   );

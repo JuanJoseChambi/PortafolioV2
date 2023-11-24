@@ -1,17 +1,8 @@
 // import { useState } from "react"
-import { useContext } from "react";
 import logo from "../../../assets/assetsHeader/logoJC.png";
 import SectionsNav from "../../../components/SectionsNav/SectionsNav";
-import ContextSharedRef from "../../../utils/Contexts/ContextSharedRef";
 
 function Nav() {
-
-  const context = useContext(ContextSharedRef)
-
-  if (!context) {
-    return null
-  }
-  const { line } = context;
   
   return (
     <nav className="area">
@@ -37,8 +28,8 @@ function Nav() {
         </section>
       </nav>
 
-      <nav className="area h-[150px] fixed bottom-4 z-10 flex justify-between items-end">
-        <ul className="flex justify-center items-center flex-col text-xl text-grey-light">
+      <nav className="area h-[150px] fixed bottom-4 flex justify-between items-end">
+        <ul className="flex justify-center items-center flex-col text-xl text-grey-light z-10">
           <li>
             <i className="cursor-pointer hover:text-white-light bx bxl-github"></i>
           </li>
@@ -53,12 +44,12 @@ function Nav() {
           </li>
         </ul>
 
-        <ul className="h-[150px] flex flex-col justify-center items-center text-grey-light text-xxs font-semibold tracking-widest">
-          {line ? null : <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>}
+        <ul className="h-[150px] flex flex-col justify-center items-center text-grey-light text-xxs font-semibold tracking-widest z-10">
+          <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>
           <li className="hover:text-white-light cursor-pointer rotate-90 my-12">
             SOMBRE MI
           </li>
-          {line ? null :  <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div> }         
+          <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div> 
         </ul>
       </nav>
     </nav>

@@ -8,7 +8,8 @@ interface providerProp {
 function ProviderSharedRef ({children}: providerProp) {
 
     const [line, setLine] = useState(false)
-
+    // console.log(line);
+    
     return(
         <ContextSharedRef.Provider value={{line, setLine}}>
             {children}

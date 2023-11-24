@@ -3,15 +3,39 @@
 @tailwind utilities;
 
 @layer components {
-    .area{
-        @apply max-w-screen-xl w-[90%] overflow-hidden mx-auto
-    }
-}
-@layer utilities {
-    .bg-gradient-radial-fixed {
-      background: radial-gradient(100vh 100vh at 65vh 10vh, #505156, #2d2e33, #1B1C21);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
+  
+  .area {
+    @apply max-w-screen-xl w-[95%] overflow-hidden mx-auto;
   }
+
+  .cards-opacity {
+    @apply
+      w-[300px]
+      h-[350px]
+      /* flex */
+      /* justify-center */
+      /* items-start */
+      relative
+      /* overflow-hidden */
+      /* rounded-sm */
+      grayscale-[80%]
+      hover:grayscale-0
+      lg:blur-xs
+      hover:h-[400px]
+      hover:w-[400px]
+      hover:blur-none
+      bg-red-500
+      
+      transition-all duration-500;
+  }
+
+}
+
+@layer utilities {
+  .bg-gradient-radial-fixed {
+    background: radial-gradient(100vh 100vh at 65vh 10vh, #505156, #2d2e33, #1b1c21);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
