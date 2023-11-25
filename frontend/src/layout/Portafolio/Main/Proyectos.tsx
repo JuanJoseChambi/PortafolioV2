@@ -19,7 +19,6 @@ function Proyectos() {
             setNum(num + 1)
         }
     }
-    console.log(cards.length -1);
     
     function prevCard () {
         if (num <= 0) {
@@ -31,20 +30,23 @@ function Proyectos() {
     
   return (
     <section className="area min-h-screen snap-center flex flex-col justify-center items-center text-white py-20 lg:py-0">
-        <section className="w-[1050px] min-h-[450px]  flex flex-wrap justify-center items-center space-y-9 lg:space-y-0 lg:space-x-5 flex-col lg:flex-row " id="carusel">
+        <section className=" w-full h-full lg:w-[1080px] lg:min-h-[450px] relative flex flex-wrap justify-evenly items-center space-y-9 lg:space-y-0 flex-col lg:flex-row">
 
-        {cards.map((card, i) => (
-            <picture key={card.id} className={`cards-opacity ${num === i? "h-[400px] w-[400px] grayscale-0 blur-none": null}`}>
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
-                <img src={card.image} alt="" />
-            </picture>
-        ))
-        }
+            <i onClick={prevCard} className='bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-[-20px] cursor-pointer z-10 text-3xl bx bx-chevron-left'></i>
+
+            {cards.map((card, i) => (
+                <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity ${num === i? "h-[400px] w-[400px] grayscale-0 blur-none cursor-auto": null}`}>
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
+                    <img src={card.image} alt="" />
+                </picture>
+            ))
+            }
+
+            <i onClick={nextCard} className='bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:right-[-20px] cursor-pointer z-10 text-3xl bx bx-chevron-right' ></i>
 
         </section>  
         <section className="space-x-10 z-10">
-            <button onClick={nextCard} className="cursor-pointer">Siguiente</button>
-            <button onClick={prevCard} className="cursor-pointer">Atras</button>
+
         </section>
     </section>
   )

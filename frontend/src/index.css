@@ -15,14 +15,11 @@
       flex
       justify-center
       items-start
-      relative
       overflow-hidden
       rounded-sm
+      cursor-pointer
       grayscale-[80%]
-
       lg:blur-xs
-      bg-red-500
-      
       transition-all duration-500;
   }
 
