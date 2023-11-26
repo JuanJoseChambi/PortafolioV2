@@ -20,7 +20,7 @@
       cursor-pointer
       grayscale-[80%]
       lg:blur-xs
-      transition-all duration-500;
+      transition-all duration-700;
   }
 
 }

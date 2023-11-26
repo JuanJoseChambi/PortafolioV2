@@ -1,100 +1,65 @@
-import perfil from "../../../assets/assetsMain/Perfil.png"
-import { useState } from "react"
-import MMarket from "../../../assets/assetsMain/Proyects/MMarket.png"
-import TN from "../../../assets/assetsMain/Proyects/TN.png"
+import perfil from "../../../assets/assetsMain/Perfil.png";
+import { useState } from "react";
+import MMarket from "../../../assets/assetsMain/Proyects/MMarket.png";
+import TN from "../../../assets/assetsMain/Proyects/TN.png";
 
-function Proyectos() {
-    const [cards, setCards] = useState([
-        {id:1, image:MMarket},
-        {id:3, image:TN},
-        {id:4, image:perfil},
-        {id:3, image:TN},
-        {id:5, image:MMarket},
-        {id:3, image:TN},
-        // {id:6, image:MMarket},
-        // {id:7, image:MMarket},
-    ])
-    const [num, setNum] = useState(3)
-
-
-    function nextCard () {
-        if (cards.length -1 === num) {
-            setNum(0)
-        }else{
-            setNum(num + 1)
-        }
-    }
-    
-    function prevCard () {
-        if (num <= 0) {
-            setNum(cards.length -1)
-        }else{
-            setNum(num - 1)
-        }
-    }
-    
-  return (
-    <section className="area min-h-screen snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
-
-        <i onClick={prevCard} className='bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-0 cursor-pointer z-10 text-3xl bx bx-chevron-left'></i>
-
-        <section className="bg-red-500 w-[1050px] h-full overflow-hidden lg:w-[1080px] lg:min-h-[450px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
-            
-            {cards.map((card, i) => {
-
-                const prev = num - 1;
-                console.log(prev);
-
-                return (
-                    (
-                        (i === prev ?  
-                         <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity`}>
-                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
-                             <img src={card.image} alt="" />
-                         </picture> 
-                         : "" 
-                        )
-                     )
-                )
-            })
-            }
-
-            {cards.map((card, i) => (
-               (i === num ?  
-                <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity ${num === i? "min-h-[400px] min-w-[400px] grayscale-0 blur-none cursor-auto": null}`}>
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
-                    <img src={card.image} alt="" />
-                </picture> 
-                : "" 
-               )
-            ))
-            }
-
-            {cards.map((card, i) => {
-                
-                
-                const next = num + 1;
-                    console.log(next);
-                    
-                return (
-                    (i === next ?  
-                     <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity`}>
-                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
-                         <img src={card.image} alt="" />
-                     </picture> 
-                     : "" 
-                    )
-                )})
-            }
-
-        </section>  
-
-        <i onClick={nextCard} className='bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:right-0 cursor-pointer z-10 text-3xl bx bx-chevron-right' ></i>
-
-        <section className="space-x-10 z-10">
-        </section>
-    </section>
-  )
+interface Cards {
+    id: number;
+    image: string;
 }
 
-export default Proyectos
+function Proyectos() {
+  const [num, setNum] = useState(3);
+  const [cards, setCards] = useState<Cards[]>([
+    { id: 3, image: perfil },
+    { id: 1, image: MMarket },
+    { id: 2, image: TN },
+    { id: 3, image: perfil },
+    { id: 4, image: TN },
+    { id: 5, image: MMarket },
+    { id: 6, image: TN },
+    { id: 3, image: perfil },
+]);
+
+  const renderCard = (card: Cards, i: number) => (
+    <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity ${num === i ? "min-h-[400px] min-w-[400px] grayscale-0 blur-none cursor-auto pointer-events-none" : ""}`}>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#1F2025]"></div>
+      <img src={card.image} alt="Juan Jose Ch" className="select-none" />
+    </picture>
+  );
+
+  function handlerNextCard() {
+    console.log(num);
+    
+    console.log(num + 1);
+    
+    setNum((num + 1) % cards.length);
+  }
+
+  function handlerPrevCard() {
+    console.log(num + 1);
+    setNum((num - 1 + cards.length) % cards.length);
+  }
+
+  return (
+    <section className="area min-h-screen snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
+      <i
+        onClick={handlerPrevCard}
+        className="bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-0 cursor-pointer z-10 text-3xl bx bx-chevron-left"
+      ></i>
+
+      <section className="bg-red- w-[1050px] h-full overflow-hidden lg:w-[1080px] lg:min-h-[450px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
+        {cards.map((card, i) => i === num - 1 || i === num || i === num + 1  ? renderCard(card, i)  : null )}
+      </section>
+
+      <i
+        onClick={handlerNextCard}
+        className="bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:right-0 cursor-pointer z-10 text-3xl bx bx-chevron-right"
+      ></i>
+
+      <section className="space-x-10 z-10"></section>
+    </section>
+  );
+}
+
+export default Proyectos;
