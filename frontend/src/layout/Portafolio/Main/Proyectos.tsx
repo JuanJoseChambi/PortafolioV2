@@ -11,14 +11,14 @@ interface Cards {
 function Proyectos() {
   const [num, setNum] = useState(3);
   const [cards, setCards] = useState<Cards[]>([
-    { id: 3, image: perfil },
+    { id: 0, image: perfil },
     { id: 1, image: MMarket },
     { id: 2, image: TN },
     { id: 3, image: perfil },
     { id: 4, image: TN },
     { id: 5, image: MMarket },
     { id: 6, image: TN },
-    { id: 3, image: perfil },
+    { id: 7, image: perfil },
 ]);
 
   const renderCard = (card: Cards, i: number) => (
@@ -27,19 +27,15 @@ function Proyectos() {
       <img src={card.image} alt="Juan Jose Ch" className="select-none" />
     </picture>
   );
-
   function handlerNextCard() {
-    console.log(num);
-    
-    console.log(num + 1);
-    
     setNum((num + 1) % cards.length);
   }
 
   function handlerPrevCard() {
-    console.log(num + 1);
     setNum((num - 1 + cards.length) % cards.length);
   }
+
+    console.log(num );
 
   return (
     <section className="area min-h-screen snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
@@ -49,7 +45,9 @@ function Proyectos() {
       ></i>
 
       <section className="bg-red- w-[1050px] h-full overflow-hidden lg:w-[1080px] lg:min-h-[450px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
-        {cards.map((card, i) => i === num - 1 || i === num || i === num + 1  ? renderCard(card, i)  : null )}
+        {cards.map((card, i) => 
+        i === num || i === num - 1 || i === num + 1 || (num === 0 && i === cards.length - 1) || (num === cards.length - 1 && i === 0) ? renderCard(card, i) : null 
+         )}
       </section>
 
       <i
