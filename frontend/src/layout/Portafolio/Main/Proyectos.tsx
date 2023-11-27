@@ -53,6 +53,8 @@ function Proyectos() {
       <img src={card.imagenes} alt="Juan Jose Ch" className="pointer-events-none" />
     </picture>
   );
+
+
   function handlerNextCard() {
     setNum((num + 1) % cards.length);
   }
@@ -60,8 +62,6 @@ function Proyectos() {
   function handlerPrevCard() {
     setNum((num - 1 + cards.length) % cards.length);
   }
-
-    console.log(num );
 
   return (
     <section className="area min-h-screen snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
