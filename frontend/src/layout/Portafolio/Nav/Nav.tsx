@@ -5,8 +5,8 @@ import SectionsNav from "../../../components/SectionsNav/SectionsNav";
 function Nav() {
   
   return (
-    <nav className="area">
-      <nav className="area fixed top-0 z-10">
+    <nav className="area relative">
+      <nav className="area fixed top-0 z-10 bg-red-">
         <section className="flex justify-between items-center py-2">
           <picture className="top-0 flex w-[65px] select-none">
             <img
@@ -28,30 +28,24 @@ function Nav() {
         </section>
       </nav>
 
-      <nav className="area h-[150px] fixed bottom-4 flex justify-between items-end">
-        <ul className="flex justify-center items-center flex-col text-xl text-grey-light z-10">
-          <li>
-            <i className="cursor-pointer hover:text-white-light bx bxl-github"></i>
-          </li>
-          <li>
-            <i className="cursor-pointer hover:text-white-light bx bxl-gmail"></i>
-          </li>
-          <li>
-            <i className="cursor-pointer hover:text-white-light bx bxl-linkedin-square"></i>
-          </li>
-          <li>
-            <i className="cursor-pointer hover:text-white-light bx bxl-twitter"></i>
-          </li>
+      <nav className="area w-[30px] h-[120px] fixed bottom-4 flex justify-center items-end z-10 bg-lime-">
+        <ul className="flex justify-center items-center flex-col text-xl text-grey-light">
+          <li><i className="cursor-pointer hover:text-white-light bx bxl-github"></i></li>
+          <li><i className="cursor-pointer hover:text-white-light bx bxl-gmail"></i></li>
+          <li><i className="cursor-pointer hover:text-white-light bx bxl-linkedin-square"></i></li>
+          <li><i className="cursor-pointer hover:text-white-light bx bxl-twitter"></i></li>
         </ul>
+      </nav>
 
-        <ul className="h-[150px] flex flex-col justify-center items-center text-grey-light text-xxs font-semibold tracking-widest z-10">
+      {/* <nav className="area w-[70px] h-[150px] fixed bottom-0 right-0 z-10 bg-red-500">
+        <ul className="h-[150px] flex flex-col justify-center items-center text-grey-light text-xxs font-semibold  bg-lim-500">
           <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div>
-          <li className="hover:text-white-light cursor-pointer rotate-90 my-12">
+          <li className="hover:text-white-light cursor-pointer rotate-90 my-12 tracking-widest">
             SOMBRE MI
           </li>
           <div className="w-[30px] h-[1px] bg-grey-light hover:bg-white-light rotate-90 cursor-pointer"></div> 
         </ul>
-      </nav>
+      </nav> */}
     </nav>
   );
 }

@@ -4,7 +4,7 @@ function Header() {
 
 
   return (
-    <header className="area flex justify-center items-center h-screen relative snap-center">
+    <header className="area flex justify-center items-center h-screen relative snap-center bg-red-">
 
       <section className="flex justify-center items-center flex-col w-full h-full ">
         <picture className="w-[150px] select-none ">

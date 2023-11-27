@@ -11,7 +11,7 @@
   .cards-opacity {
     @apply
       w-[300px]
-      h-[350px]
+      h-[300px]
       flex
       justify-center
       items-start
