@@ -30,9 +30,27 @@ function Proyectos() {
 ]); 
 
   const renderCard = (card: Cards, i: number) => (
-    <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity ${num === i ? "min-h-[390px] min-w-[400px] grayscale-0 blur-none cursor-auto pointer-events-none" : ""}`}>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#232429]"></div>
-      <img src={card.imagenes} alt="Juan Jose Ch" className="select-none" />
+    <picture onClick={() => setNum(i)} key={card.id} className={`cards-opacity select-none ${num === i ? "min-h-[390px] min-w-[400px] grayscale-0 blur-none cursor-auto" : ""}`}>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#232429]">
+        {i === num 
+        ? 
+        <section className="w-full h-full bg-[#1e1d1da0] opacity-0 hover:opacity-100 transition-opacity duration-700 flex justify-center items-center space-y-7 flex-col">
+            {card.front ? <article className="text-center">
+              <h2 className="text-xl tracking-widest font-bold">FRONTEND</h2>
+              <p className="text-xs text-white-light tracking-wider">{card.front}</p>
+            </article>: null}
+            {card.back ? <article className="text-center">
+              <h2 className="text-xl tracking-widest font-bold">BACKEND</h2>
+              <p className="text-xs text-white-light tracking-wider">{card.back}</p>
+            </article>: null}
+            {card.db ? <article className="text-center">
+              <h2 className="text-xl tracking-widest font-bold">BASES DE DATOS</h2>
+              <p className="text-xs text-white-light tracking-wider">{card.db}</p>
+            </article>: null}
+        </section> 
+        : null}
+      </div>
+      <img src={card.imagenes} alt="Juan Jose Ch" className="pointer-events-none" />
     </picture>
   );
   function handlerNextCard() {
@@ -65,10 +83,7 @@ function Proyectos() {
               <h2 className="absolute top-[-35px] drop-shadow-[1px_1px_40px_black] text-5xl font-bold tracking-wider text-white-light">{card.titulo}</h2>
               <small className="absolute top-5 font-extralight text-xs">{card.duracion}</small>
               <small className="text-center font-extralight">{card.descripcion}</small>
-              <p className="absolute left-0 text-xs">{card.front}</p>
-              <p className="absolute right-0 text-xs">{card.back}</p>
-              <p className="absolute bottom-0 text-xs">{card.db}</p>
-              <button className="w-[230px] h-[45px] shadow-xl shadow-black border border-solid border-neutral-900 font-semibold text-white-light tracking-widest text-sm">VER CODIGO</button>
+              <button className="w-[230px] h-[45px] my-4 shadow-xl shadow-black border border-solid border-neutral-900 font-semibold text-white-light tracking-widest text-sm">VER CODIGO</button>
             </> 
             : null
         )}
