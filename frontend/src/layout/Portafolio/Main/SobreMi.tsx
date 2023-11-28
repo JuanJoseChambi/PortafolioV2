@@ -25,28 +25,42 @@ function SobreMi() {
               </article>
             </article>
         </section>
-        <section className="w-[550px] min-h-[400px] absolute right-0 flex flex-col justify-start items-center">
-            <h2>HABILIDADES</h2>
-            <section className="w-full flex justify-between items-center  ">
-              <article className="w-[70%] text-center ">
-                <h2>TECNICAS</h2>
-                <section className="flex flex-row justify-evenly flex-wrap space-y-2">
-                {tecnologias.map((tec, i) => (
-                  <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md shadow-md p-2 m-2">
-                  <div className="w-[30px] h-[30px] flex justify-center items-center ">{tec.img}</div>
-                  <p className="text-[10px] tracking-wider font-extralight">{tec.nombre}</p>
-               </section>
-                ))}
+        <section className="w-[520px] min-h-[400px] absolute right-0 flex flex-col justify-center items-center space-y-5 bg-redd-500">
+
+
+              <h2 className="font-bold tracking-widest text-1xl w-full text-center drop-shadow-[6px_6px_3px_black]">HABILIDADES</h2>
+              <section className="w-full flex justify-between items-center  ">
+
+                <section className="w-[70%] text-center ">
+                  <h2 className="text-sm font-semibold tracking-wider">TECNICAS</h2>
+                  <article className="flex flex-row justify-evenly items-center flex-wrap">
+                  {tecnologias.map((tec, i) => (
+                    <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md shadow-md p-2 m-2 bg-red-5">
+                    <div className="w-[30px] h-[30px] flex justify-center items-center ">{tec.img}</div>
+                    <p className="text-[10px] tracking-wider font-extralight">{tec.nombre}</p>
+                 </section>
+                  ))}
+                  </article>    
                 </section>
-                
-      
-              </article>
-              <article className="w-[30%] bg-blue-500 text-center ">
-                <h2>BLANDAS</h2>
-                <p></p>
-              </article>
+
+                <section className="w-[30%] flex flex-col justify-start items-center text-center space-y-2">
+                  <h2 className="text-sm font-semibold tracking-wider">BLANDAS</h2>
+                  <article className="text-xs font-extralight space-y-2">
+                    <p>Adaptabilidad</p>
+                    <p>Aprendizaje Agil</p>
+                    <p>Autodidacta</p>
+                    <p>Cooperacion</p>
+                    <p>Curiosidad</p>
+                    <p>Perseverancia</p>
+                    <p>Trabajo en Equipo</p>
+                  </article>
+                </section>
+              </section>
+
+            <section>
+
             </section>
-            <p></p>
+
         </section>
     </section>
   )
