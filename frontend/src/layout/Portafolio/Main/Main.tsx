@@ -12,7 +12,7 @@ function Main() {
 
       <Proyectos/>
 
-      <Tecnologias/>
+      {/* SERVICIOS */}
 
     </main>
   );

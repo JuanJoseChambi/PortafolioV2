@@ -17,17 +17,17 @@ function SobreMi() {
   return (
     <section className="area h-screen relative flex justify-center items-center snap-center text-white bg-re-500">
         <picture className="w-[450px] h-auto absolute bottom-0 flex justify-center items-center bg-lime-00">
-          <div className={`absolute rounded-full w-full h-full transition-[background, transform, box-shadow] duration-500 ${sombraHover ? "bg-[#737373] shadow-[0px_0px_100px_5px_black]" : " bg-neutral-600"}`}></div>
+          <div className={`absolute rounded-full w-full h-full transition-[background, transform, box-shadow] duration-500 ${sombraHover ? "bg-[#737373] shadow-[0px_0px_25px_1px_#737373]" : " bg-neutral-600"}`}></div>
           <img src={perfil} alt="" className="sombra w-full drop-shadow-[0px_30px_10px_black] hover:drop-shadow-[0px_40px_20px_black] hover:scale-105 transition-[scale, drop-shadow] duration-500" 
           onMouseEnter={hanlderMouseEnter} onMouseLeave={handlerMouseLeave}/>
         </picture>
         <section className="w-[485px] min-h-[400px] absolute left-0 flex flex-col justify-start space-y-4 items-center bg-redd-500">
             <article className="space-y-2">
-              <h2 className="font-bold tracking-widest text-1xl w-full text-start drop-shadow-[6px_6px_3px_black]">SOBRE MI</h2>
+              <h2 className="font-bold tracking-widest text-2xl w-full text-start drop-shadow-[6px_6px_3px_black]">SOBRE MI</h2>
               <p className="text-xs font-extralight">¡Hola! Soy Juan José, desarrollador fullstack junior con énfasis en frontend. Mi pasión por la programación nació en la secundaria y ha crecido constantemente. Autodidacta desde el principio, participé en bootcamps como SoyHenry, donde fortalecí habilidades técnicas y blandas como cooperación y aprendizaje rápido. Hoy, sigo siendo autodidacta, explorando tecnologías como MongoDB, TypeScript y Tailwind para seguir creciendo profesionalmente.</p>
             </article>
             <article className="space-y-2">
-              <h2 className="font-bold tracking-widest text-1xl w-full text-start drop-shadow-[6px_6px_3px_black]">EDUCACION</h2>
+              <h2 className="font-bold tracking-widest text-2xl w-full text-start drop-shadow-[6px_6px_3px_black]">EDUCACION</h2>
               <article>
                 <h3 className="w-full text-start font-semibold text-sm tracking-wider">SOYHENRY</h3>
                 <p className="text-xs font-extralight">SoyHenry es un bootcamp integral de desarrollo web que forma para roles fullstack, enseñando habilidades técnicas en JavaScript, React, Node.js, PostgreSQL, y fomentando habilidades blandas como trabajo en equipo, aprendizaje rápido y resolución de problemas prácticos.</p>
@@ -41,16 +41,16 @@ function SobreMi() {
         <section className="w-[520px] min-h-[400px] absolute right-0 flex flex-col justify-center items-center space-y-5 bg-redd-500">
 
 
-              <h2 className="font-bold tracking-widest text-1xl w-full text-center drop-shadow-[6px_6px_3px_black]">HABILIDADES</h2>
-              <section className="w-full flex justify-between items-center  ">
+              <h2 className="font-bold tracking-widest text-2xl w-full text-center drop-shadow-[6px_6px_3px_black]">HABILIDADES</h2>
+              <section className="w-full flex justify-between items-start  ">
 
                 <section className="w-[70%] text-center ">
                   <h2 className="text-sm font-semibold tracking-wider">TECNICAS</h2>
                   <article className="flex flex-row justify-evenly items-center flex-wrap">
                   {tecnologias.map((tec, i) => (
-                    <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md p-2 m-2 bg-red-5 select-none hover:scale-125 hover:drop-shadow-[0px_5px_2px_black] transition-[transform, drop-shadow] duration-500">
+                    <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md m-2 select-none hover:scale-125 hover:drop-shadow-[0px_5px_2px_black] transition-[transform, drop-shadow] duration-500">
                     <div className="w-[30px] h-[30px] flex justify-center items-center pointer-events-none">{tec.img}</div>
-                    <p className="text-[10px] tracking-wider font-extralight">{tec.nombre}</p>
+                    <p className="text-[10px] font-extralight">{tec.nombre}</p>
                  </section>
                   ))}
                   </article>    
@@ -58,7 +58,7 @@ function SobreMi() {
 
                 <section className="w-[30%] flex flex-col justify-start items-center text-center space-y-2">
                   <h2 className="text-sm font-semibold tracking-wider">BLANDAS</h2>
-                  <article className="text-xs font-extralight space-y-2">
+                  <article className="text-xs font-extralight space-y-3">
                     <p>Adaptabilidad</p>
                     <p>Aprendizaje Agil</p>
                     <p>Autodidacta</p>
