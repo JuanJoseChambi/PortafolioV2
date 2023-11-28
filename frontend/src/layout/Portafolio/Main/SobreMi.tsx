@@ -1,12 +1,25 @@
+import { useState } from "react"
 import perfil from "../../../assets/assetsMain//SobreMi/sombraEnt.png"
 import { tecnologias} from "../../../assets/assetsMain/SobreMi/Tecnologias"
 
 
 function SobreMi() {
+
+  const [sombraHover, setSombraHover] = useState(false)
+
+
+  function hanlderMouseEnter () {
+    setSombraHover(true)
+  }
+  function handlerMouseLeave () {
+    setSombraHover(false)
+  }
   return (
     <section className="area h-screen relative flex justify-center items-center snap-center text-white bg-re-500">
         <picture className="w-[450px] h-auto absolute bottom-0 flex justify-center items-center bg-lime-00">
-          <img src={perfil} alt="" className="w-full drop-shadow-[0px_14px_10px_black]"/>
+          <div className={`absolute rounded-full w-full h-full transition-[background, transform, box-shadow] duration-500 ${sombraHover ? "bg-[#737373] shadow-[0px_0px_100px_5px_black]" : " bg-neutral-600"}`}></div>
+          <img src={perfil} alt="" className="sombra w-full drop-shadow-[0px_30px_10px_black] hover:drop-shadow-[0px_40px_20px_black] hover:scale-105 transition-[scale, drop-shadow] duration-500" 
+          onMouseEnter={hanlderMouseEnter} onMouseLeave={handlerMouseLeave}/>
         </picture>
         <section className="w-[485px] min-h-[400px] absolute left-0 flex flex-col justify-start space-y-4 items-center bg-redd-500">
             <article className="space-y-2">
@@ -35,8 +48,8 @@ function SobreMi() {
                   <h2 className="text-sm font-semibold tracking-wider">TECNICAS</h2>
                   <article className="flex flex-row justify-evenly items-center flex-wrap">
                   {tecnologias.map((tec, i) => (
-                    <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md shadow-md p-2 m-2 bg-red-5">
-                    <div className="w-[30px] h-[30px] flex justify-center items-center ">{tec.img}</div>
+                    <section key={i} className="w-[50px] h-[50px] flex flex-col justify-center items-center rounded-md p-2 m-2 bg-red-5 select-none hover:scale-125 hover:drop-shadow-[0px_5px_2px_black] transition-[transform, drop-shadow] duration-500">
+                    <div className="w-[30px] h-[30px] flex justify-center items-center pointer-events-none">{tec.img}</div>
                     <p className="text-[10px] tracking-wider font-extralight">{tec.nombre}</p>
                  </section>
                   ))}
