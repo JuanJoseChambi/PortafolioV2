@@ -1,14 +1,15 @@
 import logo from "../../../assets/assetsHeader/logoJC.png"
+// import logo from "../../../assets/assetsHeader/logoBienWebP.jpg"
 
 function Header() {
 
 
   return (
-    <header className="area flex justify-center items-center h-screen relative snap-center bg-red-">
+    <header className="flex justify-center items-center h-px-screen-laptop 2xl:h-px-screen-pc relative snap-center bg-gradient-radial-fixed">
 
-      <section className="flex justify-center items-center flex-col w-full h-full ">
+      <section className="area flex justify-center items-center flex-col w-full h-full ">
         <picture className="w-[150px] select-none ">
-            <img src={logo} alt="" className="w-full drop-shadow-[10px_10px_6px_black] pointer-events-none" />
+            <img src={logo} alt="JC Juan Jose" className="w-full drop-shadow-[10px_10px_6px_black] pointer-events-none" />
         </picture>
         <p className="text-grey-dark font-semibold text-sm mr-[290px] tracking-widest select-none">SOY</p>
         <h1 className="text-white-light text-7xl font-black tracking-wide drop-shadow-[15px_15px_8px_black] select-none my-6">JUAN JOSE CH</h1>
