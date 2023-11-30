@@ -5,7 +5,7 @@ function Main() {
 
 
   return (
-    <main className="bg-gradient-radial-fixed">
+    <main >
 
       <SobreMi/>
 

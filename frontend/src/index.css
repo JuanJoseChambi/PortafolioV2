@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-  
+  /* overflow-hidden */
   .area {
-    @apply max-w-screen-xl w-[95%] overflow-hidden mx-auto;
+    @apply max-w-screen-xl w-[95%]  mx-auto;
   }
 
   .cards-opacity {

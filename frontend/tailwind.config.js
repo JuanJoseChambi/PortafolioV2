@@ -28,6 +28,11 @@ export default {
       },
       blur: {
         "xs": "2px"
+      },
+      outlineColor: {
+        "white-light": "#DCDEDD",
+        "grey-light": "#9b9b9b",
+        "grey-dark": "#4e4e4e"
       }
     },
   },

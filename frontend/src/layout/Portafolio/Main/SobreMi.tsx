@@ -15,7 +15,7 @@ function SobreMi() {
     setSombraHover(false)
   }
   return (
-    <section className="area h-px-screen-laptop 2xl:h-px-screen-pc bg-lim-500 relative flex justify-center items-center snap-center text-white">
+    <section className="area h-[1100px] 2xl:h-px-screen-pc bg-lim-500 relative flex justify-center items-center snap-center text-white">
         <picture className="w-[450px] h-auto absolute bottom-0 flex justify-center items-center bg-lime-00 ">
           <div className={`absolute rounded-full w-full h-full transition-[background, transform, box-shadow] duration-500 ${sombraHover ? "bg-[#737373] shadow-[0px_0px_25px_1px_#737373]" : " bg-neutral-600"}`}></div>
           <img src={perfil} alt="" className="sombra w-full drop-shadow-[0px_30px_10px_black] hover:drop-shadow-[0px_40px_20px_black] hover:scale-105 transition-[scale, drop-shadow] duration-500 select-none" 

@@ -5,7 +5,7 @@ function Header() {
 
 
   return (
-    <header className="flex justify-center items-center h-px-screen-laptop 2xl:h-px-screen-pc relative snap-center bg-gradient-radial-fixed">
+    <header className="flex justify-center items-center h-px-screen-laptop 2xl:h-px-screen-pc relative snap-center">
 
       <section className="area flex justify-center items-center flex-col w-full h-full ">
         <picture className="w-[150px] select-none ">
