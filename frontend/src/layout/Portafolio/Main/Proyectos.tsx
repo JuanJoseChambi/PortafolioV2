@@ -70,24 +70,24 @@ function Proyectos() {
         className="bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-0 cursor-pointer z-10 text-3xl bx bx-chevron-left"
       ></i>
 
-      <section className="w-[60%] h-auto overflow-hidden lg:w-[1080px] lg:min-h-[400px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
+      <section className="w-[60%] h-auto bg-limee-500 overflow-hidden lg:w-[1080px] lg:min-h-[400px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
         {cards.map((card, i) => 
         i === num || i === num - 1 || i === num + 1 ? renderCard(card, i) : null 
         )}
       </section>
-      <section className="w-[65%] h-[180px] pt-[25px] relative flex justify-center items-center flex-col bg-limee-500">
         {cards.map((card, i) => 
             i == num 
             ?
-            <>
+            <section key={card.id} className="w-[65%] h-[150px] pt-[25px] relative flex justify-center items-center flex-col bg-redd-500">
+            {/* <div key={card.id} className="flex flex-col justify-center items-center"> */}
               <h2 className="absolute top-[-35px] drop-shadow-[1px_1px_40px_black] text-5xl font-bold tracking-wider text-white-light">{card.titulo}</h2>
               <small className="absolute top-5 font-extralight text-xs">{card.duracion}</small>
               <small className="text-center font-extralight">{card.descripcion}</small>
               <button className="w-[230px] h-[45px] my-4 shadow-xl shadow-black border border-solid border-neutral-900 font-semibold text-white-light tracking-widest text-sm">VER CODIGO</button>
-            </> 
+            {/* </div>  */}
+            </section>
             : null
         )}
-      </section>
 
       <i
         onClick={handlerNextCard}
