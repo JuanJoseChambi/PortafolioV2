@@ -64,7 +64,7 @@ function Proyectos() {
   }
 
   return (
-    <section className="area h-px-screen-laptop 2xl:h-px-screen-pc bg-redd-500 snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
+    <section className="area h-px-screen-laptop bg-redd-500 snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
       <i
         onClick={handlerPrevCard}
         className="bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-0 cursor-pointer z-10 text-3xl bx bx-chevron-left"
@@ -78,10 +78,10 @@ function Proyectos() {
         {cards.map((card, i) => 
             i == num 
             ?
-            <section key={card.id} className="w-[65%] h-[150px] pt-[25px] relative flex justify-center items-center flex-col bg-redd-500">
+            <section key={card.id} className="w-[65%] h-[150px] pt-[30px] relative flex justify-center items-center flex-col bg-redd-500">
             {/* <div key={card.id} className="flex flex-col justify-center items-center"> */}
               <h2 className="absolute top-[-35px] drop-shadow-[1px_1px_40px_black] text-5xl font-bold tracking-wider text-white-light">{card.titulo}</h2>
-              <small className="absolute top-5 font-extralight text-xs">{card.duracion}</small>
+              <small className="absolute top-3 font-extralight text-xs">{card.duracion}</small>
               <small className="text-center font-extralight">{card.descripcion}</small>
               <button className="w-[230px] h-[45px] my-4 shadow-xl shadow-black border border-solid border-neutral-900 font-semibold text-white-light tracking-widest text-sm">VER CODIGO</button>
             {/* </div>  */}

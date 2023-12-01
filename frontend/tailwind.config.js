@@ -8,7 +8,6 @@ export default {
     extend: {
       height: {
         "px-screen-laptop": "630px",
-        "px-screen-pc": "900px"
       },
       fontFamily: {
         "poppins":['Poppins', "sans-serif"]
