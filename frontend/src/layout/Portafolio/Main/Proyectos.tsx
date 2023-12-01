@@ -64,13 +64,13 @@ function Proyectos() {
   }
 
   return (
-    <section className="area h-px-screen-laptop bg-redd-500 snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
+    <section className="area min-h-px-screen-laptop bg-redd-500 snap-center relative flex flex-col justify-center items-center text-white py-20 lg:py-0">
       <i
         onClick={handlerPrevCard}
         className="bg-red w-[25px] h-[25px] flex justify-center items-center absolute right-0 lg:left-0 cursor-pointer z-10 text-3xl bx bx-chevron-left"
       ></i>
 
-      <section className="w-[60%] h-auto bg-limee-500 overflow-hidden lg:w-[1080px] lg:min-h-[400px] flex justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9 flex-col lg:flex-row">
+      <section className="w-[90%] max-h-[400px] bg-limee-500 overflow-hidden lg:w-[90%] lg:min-h-[400px] flex flex-col lg:flex-row justify-center items-center space-y-9 lg:space-y-0 lg:space-x-9  ">
         {cards.map((card, i) => 
         i === num || i === num - 1 || i === num + 1 ? renderCard(card, i) : null 
         )}
@@ -78,13 +78,13 @@ function Proyectos() {
         {cards.map((card, i) => 
             i == num 
             ?
-            <section key={card.id} className="w-[65%] h-[150px] pt-[30px] relative flex justify-center items-center flex-col bg-redd-500">
-            {/* <div key={card.id} className="flex flex-col justify-center items-center"> */}
-              <h2 className="absolute top-[-35px] drop-shadow-[1px_1px_40px_black] text-5xl font-bold tracking-wider text-white-light">{card.titulo}</h2>
-              <small className="absolute top-3 font-extralight text-xs">{card.duracion}</small>
+            <section key={card.id} className="w-[65%] h-auto pt-[30px] relative flex justify-center items-center flex-col bg-bluee-500">
+              
+              <h2 className="absolute top-0 -translate-y-6 drop-shadow-[1px_1px_40px_black] text-5xl font-bold tracking-wider text-white-light">{card.titulo}</h2>
+              <small className=" font-extralight text-xs">{card.duracion}</small>
               <small className="text-center font-extralight">{card.descripcion}</small>
               <button className="w-[230px] h-[45px] my-4 shadow-xl shadow-black border border-solid border-neutral-900 font-semibold text-white-light tracking-widest text-sm">VER CODIGO</button>
-            {/* </div>  */}
+
             </section>
             : null
         )}
