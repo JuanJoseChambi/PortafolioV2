@@ -3,11 +3,13 @@ import logoJC from "../../../assets/assetsHeader/logoJC.png";
 
 function Footer() {
   return (
-    <footer className="snap-center pt-10 h-px-screen-laptop bg-redd-500">
-      <section className="h-[50%] flex justify-center items-center">
-        <section className="area relative flex justify-start items-center px-28 bg-limee-500 ">
-          <section className="w-[450px] h-auto bg-redd-500 space-y-3">
-            <article className="space-y-5">
+    <footer className="snap-center pt-10 min-h-px-screen-laptop bg-yellow-500-500">
+
+
+      <section className="h-1/2 flex justify-center items-center bg-redd-500">
+        <section className="area relative flex flex-col lg:flex-row justify-between items-center lg:px-28 bg-limee-500 ">
+          <section className="w-full lg:w-[450px] bg-bluee-500 space-y-3">
+            <article className="space-y-5 text-center lg:text-start">
               <h2 className="font-semibold text-2xl text-white-light tracking-widest">
                 CONTACTAME
               </h2>
@@ -17,7 +19,7 @@ function Footer() {
                 Contáctame y exploremos juntos las oportunidades. ¡Hasta pronto!{" "}
               </p>
             </article>
-            <article className="space-y-5 py-6">
+            <article className="space-y-5 py-6 text-center lg:text-start">
               <p className="text-xs font-light text-white-light">
                 (+54)1161000622
               </p>
@@ -29,7 +31,7 @@ function Footer() {
               </p>
             </article>
           </section>
-          <form className="w-[360px] h-[380px] absolute right-44 bottom-0 translate-y-44 flex flex-col justify-center items-center rounded-sm space-y-5 z-10 shadow-[0px_0px_35px_2px_black] outline-grey-light bg-white">
+          <form className="w-4/5 lg:w-[360px] h-[380px] lg:absolute lg:right-44 lg:bottom-0 lg:translate-y-44 my-5 lg:my-0 flex flex-col justify-center items-center rounded-sm space-y-5 z-10 shadow-[0px_0px_35px_2px_black] outline-grey-light bg-white">
             <h2 className="font-semibold text-2xl text-black tracking-widest w-full px-10">
               HABLAMOS ?{" "}
             </h2>
@@ -53,16 +55,19 @@ function Footer() {
           </form>
         </section>
       </section>
-      <section className="h-[50%] flex justify-center items-center bg-[#1b1c21]">
-        <section className="area relative flex justify-between items-end px-28 bg-limee-500 ">
 
-          <section className="w-[50%] flex flex-col justify-center items-center bg-redd-500">
+
+
+      <section className="h-[50%] flex justify-center items-center bg-[#1b1c21]">
+        <section className="area relative flex justify-center lg:justify-between items-end lg:px-28 bg-redd-500 ">
+
+          <section className="w-full lg:w-[50%] flex flex-col justify-center items-center bg-bluee-500">
+
             <picture className="w-[150px] h-auto bg-greenn-500 pointer-events-none">
               <img src={logoJC} alt="" className="select-none" />
             </picture>
-            <article>
-              {/* <h2>Hola Como va</h2> */}
-              <ul className="w-[100px] h-[50px] flex justify-center items-center space-x-10 transition-colors duration-500">
+
+              <ul className="w-[100px] lg:w-full h-auto lg:h-[50px] flex flex-col lg:flex-row flex-wrap justify-center items-start lg:items-center lg:space-x-10 transition-colors duration-500 bg-redd-500">
                 <li>
                   <a target="_black" href="https://github.com/JuanJoseChambi" className="flex justify-center items-center text-grey-light hover:text-white-light transition-colors duration-500">
                     <i className="mr-2 bx bxl-github"></i>GitHub
@@ -84,10 +89,9 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-            </article>
           </section>
           
-          <button className="w-40 h-[30px] mr-[150px] bg-black text-white-light rounded-sm">Inicio</button>
+          {/* <button className="w-40 h-[30px] mr-[150px] bg-black text-white-light rounded-sm">Inicio</button> */}
         
         </section>
       </section>
