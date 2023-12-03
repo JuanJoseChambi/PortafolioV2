@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       height: {
-        "px-screen-laptop": "630px",
+        "px-screen-laptop": "640px",
       },
       fontFamily: {
         "poppins":['Poppins', "sans-serif"]
