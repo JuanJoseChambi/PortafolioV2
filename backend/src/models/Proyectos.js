@@ -20,7 +20,7 @@ const proyectoSchema = new mongoose.Schema({
     front: {
         type: String
     },
-    backend: {
+    back: {
         type: String
     },
     db: {
